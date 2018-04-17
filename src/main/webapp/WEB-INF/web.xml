@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         id="WebApp_ID" version="3.1">
+    <display-name>javaweb01</display-name>
+
+
+    <!-- Servlet产生验证码 -->
+    <servlet>
+        <servlet-name>RandomCodeServlet</servlet-name>
+        <servlet-class>com.ppdai.Servlet.RandomCodeServlet</servlet-class>
+        <!-- 加载的级别 (数字越小级别越大 越优先加载 1-10) -->
+        <load-on-startup>4</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RandomCodeServlet</servlet-name>
+        <url-pattern>/randomCodeServlet</url-pattern>
+    </servlet-mapping>
+
+    <!--配置过滤器-->
+
+
+    <servlet>
+        <servlet-name>UsersServlet</servlet-name>
+        <servlet-class>com.ppdai.Servlet.UsersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UsersServlet</servlet-name>
+        <url-pattern>/UsersServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>BorrowServlet</servlet-name>
+        <servlet-class>com.ppdai.Servlet.BorrowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BorrowServlet</servlet-name>
+        <url-pattern>/BorrowServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>UpServlet</servlet-name>
+        <servlet-class>com.ppdai.Servlet.UpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpServlet</servlet-name>
+        <url-pattern>/UpServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.ppdai.Servlet.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>FundServlet</servlet-name>
+        <servlet-class>com.ppdai.Servlet.FundServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FundServlet</servlet-name>
+        <url-pattern>/FundServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>QueryServlet</servlet-name>
+        <servlet-class>com.ppdai.Servlet.QueryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>QueryServlet</servlet-name>
+        <url-pattern>/QueryServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
